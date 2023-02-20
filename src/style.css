@@ -1,0 +1,20 @@
+#weatherView
+{
+    background-image: url("https://wallpapers.com/images/featured-full/sky-mvehfqz6w2ges2dj.jpg");
+        border-radius: 10px / 10px;
+}
+
+#cityHeader
+{
+background-color:rgb(90, 173, 224);
+border-radius: 10px / 10px;
+}
+
+ul {
+    list-style-type: none;
+        /* Remove bullets */
+        padding: 0;
+        /* Remove padding */
+        margin: 0;
+        /* Remove margins */
+}

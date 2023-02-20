@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Yana's Weather App</title>
+  </head>
+  <body>
+    <div class="container" id="weatherView">
+      <!-- Search box + Submit -->
+      <div class="container" id="cityHeader">
+        <div class="row">
+          <div class="col-2">City Name</div>
+          <div class="col-1">Timezone</div>
+        </div>
+      </div>
+      <div class="container" id="weatherDetails">
+        <div class="row">
+          <div class="col-3">
+            <ul>
+              <li>61° <span>C</span><span> | </span><span>F</span></li>
+              <li>Fair</li>
+              <li><span>Day 74°</span> <span>Night 52°</span></li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container" id="forecast">
+        <div class="row">
+          <div class="col-1">
+            <ul>
+              <li>tomorrow</li>
+              <li>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+                  alt=""
+                />
+              </li>
+              <li>6°</li>
+            </ul>
+          </div>
+          <div class="col-1">
+            <ul>
+              <li>after tomorrow</li>
+              <li>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
+                  alt=""
+                />
+              </li>
+              <li>3°</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
