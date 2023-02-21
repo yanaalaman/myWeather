@@ -80,8 +80,8 @@ function changeHTMLbyCity(cityName) {
   document.getElementById("weatherDesc").innerText = weatherDesc;
   document.getElementById("windspeedKmph").innerText = windspeedKmph;
   document.getElementById("tempHTML").innerText = temp_C+"°";
-  //document.getElementById("current_time").innerText = `${days[dayOfWeek]} ${hour}:${minutes}`;
-  document.getElementById("current_time").innerText = cityTime;
+  document.getElementById("observationTime").innerText = `Observation Time GMT: ${cityTime}`;
+  document.getElementById("current_time").innerText = `Current Time: ${days[dayOfWeek]} ${hour}:${minutes}`;
   document.getElementById("currentWeatherImg").src = currentWeatherImg;
 
   // Forecast Weather 

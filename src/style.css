@@ -1,13 +1,21 @@
 #weatherView
 {
     background-image: url("https://wallpaperset.com/w/full/c/7/b/70199.jpg");
-        border-radius: 10px / 10px;
+    border-radius: 10px / 10px;
 }
 
 #cityHeader
 {
 background-color:rgb(90, 173, 224);
 border-radius: 10px / 10px;
+}
+
+#cityID 
+{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
 }
 
 #forecast
