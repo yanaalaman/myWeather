@@ -38,7 +38,8 @@ ul {
     position: relative;
 }
 
-#dayPlus1, #dayPlus2, #dayPlus3
+#dayPlus1, #dayPlus2, #dayPlus3,
+#dayPlus4,#dayPlus5
 {
     text-align: left;
     font-weight: bold;
