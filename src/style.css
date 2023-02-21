@@ -22,3 +22,17 @@ ul {
         margin: 0;
 }
 
+#tempHTML 
+{
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+}
+
+#CtoF #fahrenheit #celsius
+{
+    position:relative;
+    text-align: left;
+    vertical-align: top;
+}

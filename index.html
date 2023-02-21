@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="src/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -16,27 +18,31 @@
   <body>
     <div class="container" id="weatherView">
       <!-- Search box + Submit -->
-      <input id="cityInput" type="text" placeholder=" Type a City" /><button>
-        Search
-      </button>
+      <input id="cityInput" type="text" placeholder="Search..." />
+      <button onclick="checkCity()">Search</button>
       <div class="container" id="cityHeader">
         <div class="row">
-          <div class="col-2">City Name</div>
-          <div class="col-1">Timezone</div>
+          <div class="col-5" id="cityID">City Name</div>
+          <div class="col-1" id="current_time">Timezone</div>
         </div>
       </div>
       <div class="container" id="weatherDetails">
         <div class="row">
-          <div class="col-3">
+          <div class="col-9">
             <ul>
-              <li>61° <span>C</span><span> | </span><span>F</span></li>
-              <li>Fair</li>
-              <li><span>Day 74°</span> <span>Night 52°</span></li>
+              <li>
+                <span id="tempHTML">61</span><span id="celsius">C</span
+                ><span id="CtoF"> | </span><span id="fahrenheit">F</span>
+              </li>
+              </li>
+
+              <li id="weatherDesc"></li>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind: <span id="windspeedKmph"></span></li>
             </ul>
           </div>
           <div class="col-3">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+            <img id="currentWeatherImg" src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt=""
             />
           </div>
@@ -46,26 +52,15 @@
         <div class="row">
           <div class="col-1">
             <ul>
-              <li>tomorrow</li>
-              <li>
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
-                  alt=""
-                />
-              </li>
-              <li>6°</li>
+              <li id="dayPlus1">tomorrow</li>
+              <li> <span id="dayPlus1tempMin"></span> <span id="dayPlus1tempMax"></span></li>
             </ul>
           </div>
           <div class="col-1">
             <ul>
-              <li>tomorrow+1</li>
-              <li>
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/48/rain_light.png"
-                  alt=""
-                />
-              </li>
-              <li>3°</li>
+              <li id="dayPlus2">tomorrow</li>
+              <li> <span id="dayPlus2tempMin"></span> <span id="dayPlus2tempMax"></span></li>
+            </ul>
             </ul>
           </div>
         </div>
