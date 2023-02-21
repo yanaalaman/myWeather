@@ -26,8 +26,15 @@ let todayPlus3tempmax
 let todayPlus3tempmin
 let todayPlus3img
 
-let todayPlus4
-let todayPlus5
+let todayPlus4date
+let todayPlus4tempmax
+let todayPlus4tempmin
+let todayPlus4img
+
+let todayPlus5date
+let todayPlus5tempmax
+let todayPlus5tempmin
+let todayPlus5img
 
 
 // API Section
@@ -100,7 +107,20 @@ function changeHTMLbyCity(cityName) {
   document.getElementById("dayPlus3tempMin").innerText = `Min:${todayPlus3tempmin}°`;
   document.getElementById("dayPlus3tempMax").innerText = `Max:${todayPlus3tempmax}°`;
   document.getElementById("todayPlus3img").src = todayPlus3img;
+
+
+  document.getElementById("dayPlus4").innerText = todayPlus4date;
+  document.getElementById("dayPlus4tempMin").innerText = `Min:${todayPlus4tempmin}°`;
+  document.getElementById("dayPlus4tempMax").innerText = `Max:${todayPlus4tempmax}°`;
+  document.getElementById("todayPlus4img").src = todayPlus4img;
+  
+  document.getElementById("dayPlus5").innerText = todayPlus5date;
+  document.getElementById("dayPlus5tempMin").innerText = `Min:${todayPlus5tempmin}°`;
+  document.getElementById("dayPlus5tempMax").innerText = `Max:${todayPlus5tempmax}°`;
+  document.getElementById("todayPlus5img").src = todayPlus3img;
 }
+
+
 
 // Get weather and change HTML
 function getWeather(response) {
@@ -130,6 +150,16 @@ function getWeather(response) {
   todayPlus3tempmax = response.data.data.weather[2].maxtempC;
   todayPlus3tempmin = response.data.data.weather[2].mintempC;
   todayPlus3img = response.data.data.weather[2].hourly[4].weatherIconUrl[0].value;
+  
+  todayPlus4date = response.data.data.weather[3].date;
+  todayPlus4tempmax = response.data.data.weather[3].maxtempC;
+  todayPlus4tempmin = response.data.data.weather[3].mintempC;
+  todayPlus4img = response.data.data.weather[3].hourly[4].weatherIconUrl[0].value;
+  
+   todayPlus5date = response.data.data.weather[4].date;
+  todayPlus5tempmax = response.data.data.weather[4].maxtempC;
+  todayPlus5tempmin = response.data.data.weather[4].mintempC;
+  todayPlus5img = response.data.data.weather[4].hourly[4].weatherIconUrl[0].value;
   
   // change HTML
   changeHTMLbyCity(cityName);
