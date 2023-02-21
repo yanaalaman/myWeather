@@ -38,6 +38,13 @@ ul {
     position: relative;
 }
 
+#dayPlus1, #dayPlus2, #dayPlus3
+{
+    text-align: left;
+    font-weight: bold;
+}
+
+
 #CtoF #fahrenheit #celsius
 {
     position:relative;

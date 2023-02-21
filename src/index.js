@@ -88,11 +88,18 @@ function changeHTMLbyCity(cityName) {
   document.getElementById("dayPlus1").innerText = todayPlus1date;
   document.getElementById("dayPlus1tempMin").innerText = "Min:"+todayPlus1tempmin+"°";
   document.getElementById("dayPlus1tempMax").innerText = "Max:"+todayPlus1tempmax+"°";
+  document.getElementById("todayPlus1img").src = todayPlus1img;
 
   document.getElementById("dayPlus2").innerText = todayPlus2date;
   document.getElementById("dayPlus2tempMin").innerText = "Min:"+todayPlus2tempmin+"°";
   document.getElementById("dayPlus2tempMax").innerText = "Max:"+todayPlus2tempmax+"°";
+  document.getElementById("todayPlus2img").src = todayPlus2img;
 
+  
+  document.getElementById("dayPlus3").innerText = todayPlus3date;
+  document.getElementById("dayPlus3tempMin").innerText = `Min:${todayPlus3tempmin}°`;
+  document.getElementById("dayPlus3tempMax").innerText = `Max:${todayPlus3tempmax}°`;
+  document.getElementById("todayPlus3img").src = todayPlus3img;
 }
 
 // Get weather and change HTML
@@ -112,11 +119,17 @@ function getWeather(response) {
   console.log(todayPlus1date);
   todayPlus1tempmax = response.data.data.weather[0].maxtempC;
   todayPlus1tempmin = response.data.data.weather[0].mintempC;
+  todayPlus1img = response.data.data.weather[0].hourly[4].weatherIconUrl[0].value;
 
   todayPlus2date = response.data.data.weather[1].date;
   todayPlus2tempmax = response.data.data.weather[1].maxtempC;
   todayPlus2tempmin = response.data.data.weather[1].mintempC;
+  todayPlus2img = response.data.data.weather[1].hourly[4].weatherIconUrl[0].value;
 
+  todayPlus3date = response.data.data.weather[2].date;
+  todayPlus3tempmax = response.data.data.weather[2].maxtempC;
+  todayPlus3tempmin = response.data.data.weather[2].mintempC;
+  todayPlus3img = response.data.data.weather[2].hourly[4].weatherIconUrl[0].value;
   
   // change HTML
   changeHTMLbyCity(cityName);
