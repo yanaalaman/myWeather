@@ -136,7 +136,6 @@ function getWeather(response) {
   
   // Forecast Weather 
   todayPlus1date = response.data.data.weather[0].date;
-  console.log(todayPlus1date);
   todayPlus1tempmax = response.data.data.weather[0].maxtempC;
   todayPlus1tempmin = response.data.data.weather[0].mintempC;
   todayPlus1img = response.data.data.weather[0].hourly[4].weatherIconUrl[0].value;
